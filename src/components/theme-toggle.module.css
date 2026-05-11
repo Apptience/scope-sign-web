@@ -1,0 +1,50 @@
+.toggle {
+  position: relative;
+  display: inline-flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 28px;
+  padding: 2px;
+  background: var(--background-modifier-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-smooth);
+}
+
+.toggle:focus-visible .track {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.knob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: var(--surface);
+  border-radius: 50%;
+  box-shadow: var(--shadow-subtle);
+  color: var(--foreground);
+  transition: all var(--transition-fast);
+}
+
+.knob.dark {
+  transform: translateX(24px);
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.knob svg {
+  position: absolute;
+}

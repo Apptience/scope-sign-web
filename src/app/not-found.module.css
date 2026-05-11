@@ -1,0 +1,103 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  padding: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  background: var(--background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--brand);
+  border: 1px solid var(--border-subtle);
+}
+
+.compassIcon {
+  animation: hoverShake 4s ease-in-out infinite;
+}
+
+.errorCode {
+  font-size: clamp(5rem, 15vw, 8.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+  margin: 0 0 16px 0;
+  background: linear-gradient(135deg, var(--brand) 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+  filter: drop-shadow(0px 4px 20px rgba(88, 101, 242, 0.15));
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px 0;
+  color: var(--header-primary);
+  line-height: 1.2;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  max-width: 340px;
+}
+
+.homeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.homeBtn:hover {
+  background: var(--brand-560);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hoverShake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -1,0 +1,417 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background-primary);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.splitLayout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px;
+  background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
+  border-right: 1px solid var(--border);
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 48px;
+  background: var(--background-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  background: var(--brand);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--header-primary);
+  letter-spacing: -0.02em;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--header-primary);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.ctaTitle span {
+  color: var(--brand);
+}
+
+.ctaSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ctaSubtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  max-width: 480px;
+}
+
+.testimonialsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.ctaFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ctaFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ctaFeatureIcon {
+  width: 24px;
+  height: 24px;
+  background: var(--brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.ctaFeatureText {
+  font-size: 1rem;
+  color: var(--text-normal);
+}
+
+.testimonial {
+  background: var(--background-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.testimonialQuote {
+  font-size: 1rem;
+  color: var(--text-normal);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonialAvatar {
+  width: 40px;
+  height: 40px;
+  background: var(--brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.testimonialInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--header-primary);
+}
+
+.testimonialRole {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.formWrapper {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.formHeader {
+  margin-bottom: 24px;
+}
+
+.formLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--header-primary);
+  margin-bottom: 4px;
+}
+
+.formSubtitle {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.headerLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--header-primary);
+  margin: 0;
+}
+
+.error {
+  color: var(--status-danger-text);
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(237, 66, 69, 0.1);
+  border-radius: var(--radius-md);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formSingle {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--header-primary);
+}
+
+.forgotLink {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  color: var(--brand);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.9375rem;
+  color: var(--text-normal);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.inputWithIcon {
+  padding-right: 44px;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.togglePassword:hover {
+  color: var(--text-normal);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--brand);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.submitBtn:hover {
+  background: var(--brand-560);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.footerText {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.footerLink {
+  color: var(--header-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: var(--brand);
+}
+
+@media (max-width: 900px) {
+  .splitLayout {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    padding: 32px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    min-height: auto;
+  }
+
+  .logo {
+    margin-bottom: 32px;
+  }
+
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
+
+  .testimonialsSection {
+    margin-top: 32px;
+  }
+
+  .rightPanel {
+    padding: 32px 24px;
+  }
+
+  .formWrapper {
+    max-width: 100%;
+  }
+}

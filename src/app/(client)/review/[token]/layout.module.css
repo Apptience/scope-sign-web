@@ -1,0 +1,47 @@
+.clientLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.agencyBadge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--background-secondary);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: normal;
+}
+
+.headerRight {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.main {
+  flex: 1;
+}

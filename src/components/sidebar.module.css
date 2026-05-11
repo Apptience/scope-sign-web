@@ -1,0 +1,97 @@
+.sidebar {
+  width: 220px;
+  height: 100%;
+  background: var(--background-secondary);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background: var(--brand);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--header-primary);
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  flex: 1;
+  padding: 12px 8px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.navItem.active {
+  background: var(--brand);
+  color: #ffffff;
+}
+
+.navItem.active:hover {
+  background: var(--brand-560);
+}
+
+.footer {
+  padding: 8px;
+}
+
+.signOutBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all var(--transition-fast);
+}
+
+.signOutBtn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--status-danger-text);
+}

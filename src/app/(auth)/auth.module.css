@@ -338,20 +338,23 @@
 
 .submitBtn {
   width: 100%;
-  padding: 12px;
-  margin-top: 4px;
+  padding: 14px 28px;
+  margin-top: 8px;
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #ffffff;
-  background: var(--brand);
-  border: none;
-  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #4f46e5 0%, #4338ca 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(67, 56, 202, 0.5);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .submitBtn:hover {
-  background: var(--brand-560);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(67, 56, 202, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .submitBtn:disabled {

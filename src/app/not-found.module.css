@@ -79,7 +79,7 @@
 
 .homeBtn:hover {
   background: var(--brand-560);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   opacity: 1;
 }
 

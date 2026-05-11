@@ -206,19 +206,22 @@
 }
 
 .submitBtn {
-  padding: 8px 24px;
+  padding: 10px 24px;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #ffffff;
-  background: var(--brand);
-  border: none;
-  border-radius: var(--radius-full);
+  background: var(--brand-gradient);
+  border-radius: 30px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--brand-shadow);
+  border: none;
 }
 
 .submitBtn:hover {
-  background: var(--brand-560);
+  transform: translateY(-1px);
+  box-shadow: var(--brand-shadow-hover);
+  color: #ffffff !important;
 }
 
 .submitBtn:disabled {

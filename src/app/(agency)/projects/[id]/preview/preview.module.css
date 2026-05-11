@@ -160,7 +160,7 @@
 
 .scopeCard:hover {
   border-color: var(--brand);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .scopeCard.out_of_scope {

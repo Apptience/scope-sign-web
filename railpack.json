@@ -1,0 +1,19 @@
+{
+  "steps": {
+    "install": {
+      "inputs": ["..."],
+      "commands": [
+        "npm install"
+      ]
+    },
+    "build": {
+      "inputs": ["...", { "step": "install" }],
+      "commands": [
+        "npm run build"
+      ]
+    }
+  },
+  "deploy": {
+    "startCommand": "npm run start"
+  }
+}

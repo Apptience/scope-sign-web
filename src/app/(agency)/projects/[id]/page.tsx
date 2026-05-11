@@ -947,12 +947,7 @@ export default function ProjectDetailPage() {
             >
               <Plus size={16} /> Add Section
             </button>
-            <button
-              className={styles.addCardBtn}
-              onClick={() => handleInitiateNewCard(null)}
-            >
-              <Plus size={16} /> Add Scope Card
-            </button>
+
             {project.sowText && (
               <div className={styles.regenerateDropdownContainer}>
                 <button

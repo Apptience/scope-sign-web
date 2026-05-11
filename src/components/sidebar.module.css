@@ -19,13 +19,14 @@
 .logoIcon {
   width: 32px;
   height: 32px;
-  background: var(--brand);
-  border-radius: var(--radius-md);
+  background: var(--brand-gradient);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.2);
 }
 
 .logoText {
@@ -63,16 +64,19 @@
 }
 
 .navItem.active {
-  background: var(--brand);
+  background: var(--brand-gradient);
   color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.15);
 }
 
 .navItem.active:hover {
-  background: var(--brand-560);
+  opacity: 0.95;
 }
 
 .footer {
   padding: 8px;
+  position: relative;
 }
 
 .signOutBtn {
@@ -91,7 +95,78 @@
   transition: all var(--transition-fast);
 }
 
-.signOutBtn:hover {
+.signOutBtn:hover, .signOutBtn.active {
   background: var(--background-modifier-hover);
   color: var(--status-danger-text);
+}
+
+.confirmPopover {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 8px;
+  right: 8px;
+  background: var(--background-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-hover);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: pop-up 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom center;
+}
+
+.popoverTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--header-primary);
+  text-align: center;
+}
+
+.popoverActions {
+  display: flex;
+  gap: 8px;
+}
+
+.popoverBtn {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.cancelBtn {
+  background: var(--background-secondary);
+  color: var(--text-muted);
+}
+
+.cancelBtn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--header-primary);
+}
+
+.confirmBtn {
+  background: var(--status-danger-text);
+  color: white;
+}
+
+.confirmBtn:hover {
+  opacity: 0.9;
+}
+
+@keyframes pop-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
